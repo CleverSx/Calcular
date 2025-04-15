@@ -1,5 +1,6 @@
 function calcularIMC(peso, altura) {
-    return peso / (altura * altura);
+    const imc = peso / (altura * altura);
+    return imc;
 }
 
 function clasificarIMC(imc) {
@@ -16,13 +17,6 @@ function clasificarIMC(imc) {
     } else {
         return "Obesidad extrema (Grado III)";
     }
-}
-
-const pesoUsuario = 62;
-const alturaUsuario = 1.69;
-
-const imcUsuario = calcularIMC(pesoUsuario, alturaUsuario);
-const clasificacion = clasificarIMC(imcUsuario);
-
-console.log(`Tu IMC es: ${imcUsuario.toFixed(2)}`);
-console.log(`Clasificación: ${clasificacion}`);
+} 
+module.exports.moduloCalcularIMC=calcularIMC;
+module.exports.moduloClasificarIMC=clasificarIMC;
